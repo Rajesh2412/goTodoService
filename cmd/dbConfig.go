@@ -23,8 +23,8 @@ var count int64
 func (app *App) connectDB() *sql.DB {
 	// conString := "postgres://postgres:1234567890@localhost:5432/todo?sslmode=disable"
 	//connString := os.Env("DSN")
-	connString := "user='koyeb-adm' password=YGkD3V6OaXqm host=ep-noisy-snow-a281berd.eu-central-1.pg.koyeb.app dbname='todos'"
-	// connString := fmt.Sprintf("host=%s port=%v user=%s password=%s dbname=%s sslmode=%s", host, port, user, password, dbname, sslmode)
+	
+	connString := fmt.Sprintf("host=%s port=%v user=%s password=%s dbname=%s sslmode=%s", host, port, user, password, dbname, sslmode)
 
 	for {
 		db, err := OpenDB(connString)
